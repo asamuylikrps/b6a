@@ -1,0 +1,19 @@
+<VirtualHost *:80>
+        ServerName b6a.scoreboard-qa.selfip.com
+
+        DocumentRoot "/var/www/b6a/core_app/web"
+
+        ErrorLog /var/www/b6a/log/error.log
+        CustomLog /var/www/b6a/log/access.log combined
+
+        <Directory />
+                Options FollowSymLinks
+                AllowOverride None
+        </Directory>
+        <Directory /var/www/>
+                Options FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                Allow from all
+        </Directory>
+</VirtualHost>
