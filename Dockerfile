@@ -30,5 +30,5 @@ RUN ln -s /etc/apache2/sites-available/phpinfo.conf /etc/apache2/sites-enabled/p
 
 RUN sed -i 's/short_open_tag = Off/short_open_tag = On/' /etc/php5/apache2/php.ini
 
-ENTRYPOINT ["/run/run.sh"]
+#ENTRYPOINT ["/run/run.sh"]
 
